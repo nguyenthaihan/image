@@ -24,7 +24,7 @@ class Encoder extends \Intervention\Image\AbstractEncoder
         $imagick->setImageCompression($compression);
         $imagick->setCompressionQuality($this->quality);
         $imagick->setImageCompressionQuality($this->quality);
-
+        $imagick->stripImage();
         return $imagick->getImagesBlob();
     }
 
